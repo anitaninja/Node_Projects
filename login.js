@@ -62,6 +62,9 @@ con.query('SELECT * FROM node_data',function(err,rows){
   console.log(rows);
 });
 
+
+
+
 // Create new record..
 
 var user = { Id: 3, password: 'riya' };
@@ -71,6 +74,8 @@ con.query('INSERT INTO node_data SET ?', user, function(err,res){
   console.log('Last insert Id:', res.insertId);
 });
 //created...
+
+
 
 //update record
 
@@ -86,7 +91,7 @@ con.query(
 //delete record...
 con.query(
   'DELETE FROM node_data WHERE id = ?',
-  [1],
+  [3],
   function (err, result) {
     if (err) throw err;
 
